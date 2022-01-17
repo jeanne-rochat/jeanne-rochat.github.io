@@ -1,0 +1,87 @@
+body {
+  background-image: url(Contacter.png);
+  color: #ffc857;
+  background-size: 1450px 725px;
+}
+
+h1 {
+  margin-left: 1em;
+  font-size: 4em;
+  margin-top: 0;
+}
+
+main {
+  margin-left: 3em;
+  color: white;
+  font-size: 1.5em;
+}
+
+textarea {
+  margin-top: 1em;
+  border-block-color: #ffc857;
+  border-width: 5px;
+  background-color: #323031;
+  width: 800px;
+  color: white;
+  font-size: 15px;
+}
+
+#mail {
+  margin-top: 1em;
+  border-block-color: #ffc857;
+  border-width: 5px;
+  background-color: #323031;
+  width: 800px;
+  color: white;
+  font-size: 15px;
+}
+
+#msg {
+  height: 300px;
+}
+
+#button {
+  background-color: #ffc857;
+  color: #323031;
+  height: 30px;
+  width: 815px;
+}
+
+#button:active {
+  background-color: #ffc857;
+  color: white;
+}
+
+img {
+  width: 180px;
+  height: 180px;
+  padding: 30px;
+}
+
+.container {
+  width: 200px;
+  margin-left: 66em;
+  margin-top: -1.5em;
+  position: absolute;
+}
+
+#img_insta {
+  margin-top: 14em;
+  position: absolute;
+}
+
+#img_fb {
+  margin-top: 27.7em;
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  margin-left: 12em;
+}
+
+.return {
+  color: white;
+  font-size: 1.2em;
+  margin-left: 0;
+  margin-top: 0.5em;
+  position: absolute;
+}

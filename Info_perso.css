@@ -1,0 +1,146 @@
+body {
+  background-image: url(Info_perso.png);
+  color: #ffc857;
+  background-size: 1460px 730px;
+}
+
+h1 {
+  margin-left: 1em;
+  font-size: 4em;
+}
+
+h1 {
+  animation-duration: 2s;
+  animation-name: slidein;
+}
+@keyframes slidein {
+  from {
+    margin-left: 100%;
+    width: 300%;
+  }
+
+  to {
+    margin-left: 1em;
+    width: 100%;
+  }
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+#img_tel {
+  margin-left: 4em;
+  margin-top: 5em;
+}
+
+#img_env {
+  margin-left: 4em;
+  margin-top: 15em;
+}
+
+#img_home {
+  width: 130px;
+  height: 130px;
+  margin-left: 50em;
+  margin-top: 9em;
+}
+
+#txt_tel {
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 8em;
+  margin-top: 3.5em;
+}
+
+#txt_env {
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 8em;
+  margin-top: 10em;
+}
+
+#txt_home {
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 37.5em;
+  margin-top: 6em;
+}
+
+.return {
+  color: white;
+  font-size: 1.6em;
+  margin-left: 2.5em;
+  margin-top: 15em;
+  position: absolute;
+}
+body {
+  background-image: url(Info_perso.png);
+  color: #ffc857;
+  background-size: 1460px 730px;
+}
+
+h1 {
+  margin-left: 1em;
+  font-size: 4em;
+}
+
+img {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+}
+
+#img_tel {
+  margin-left: 4em;
+  margin-top: 5em;
+}
+
+#img_env {
+  margin-left: 4em;
+  margin-top: 15em;
+}
+
+#img_home {
+  width: 130px;
+  height: 130px;
+  margin-left: 50em;
+  margin-top: 9em;
+}
+
+#txt_tel {
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 8em;
+  margin-top: 3.5em;
+}
+
+#txt_env {
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 8em;
+  margin-top: 10em;
+}
+
+#txt_home {
+  position: absolute;
+  color: white;
+  font-size: 1.6em;
+  margin-left: 37.5em;
+  margin-top: 6em;
+}
+
+.return {
+  color: white;
+  font-size: 1.6em;
+  margin-left: 2.5em;
+  margin-top: 15em;
+  position: absolute;
+}
