@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <section>
+
+            <h1>Statistiques sur les feux meditéranéens</h1>
+
+        </section>
+
+        <section>
+          <h2 id="intro">Le but de se site internet est de comparer leur nombre avec leur surfaces brulée sur la période 2021-2022. Nous étudions  les regions suivantes : Corse, Rhone-Alpes, Languedoc Rousillons et Provence-Alpe-Cote-d’Azur.</h2>
+        </section>
+
+        <section class="graphiques">
+
+        <div>
+          <h2 class="titre">Nombre d'incendies </h2> 
+
+          <br>
+          <p>
+            Nous pouvons remarquer que la région Rhône-Alpes a été la région la moins touché sur la période 2021-2022 avec 181 incendie, la Corse a été la second région la moins touché avec 692 incendie. Le Languedoc-Roussillon et la Provence-Alpes-Côte d’Azur sont les régions avec le plus d’incendie sur cette période avec 1227 et 1309 incendie.
+          </p>
+        </div>
+            <div class="droite">
+            <div id="graph1" style="width:52vw; height:400px"></div></div>
+
+            
+
+            <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.js"></script>
+            <script>
+              fetch('./incendies.json')
+                .then((response) => response.json())
+                .then((json) => {
+                  // Initialize the echarts instance based on the prepared dom
+                  const myChart = echarts.init(document.querySelector('#graph1'));
+            
+                  const tableauDeNombres = json.map((unObjet) => unObjet['Nombre de feu'])
+            
+            
+                  // Specify the configuration items and data for the chart
+                  const option = {
+            
+
+                    tooltip: {},
+
+                    
+                    xAxis: {
+                      data: ["CORSE","LANGUEDOC-ROUSSILLON","PROVENCE-ALPES-COTE D'AZUR","RHONE-ALPES"]// Ecrit 1, 2, 3, 4, ...
+                },
+                    yAxis: {
+                    },
+                    series: [
+                      {
+                        
+                        name: 'Surface brulée',
+                        type: 'bar',
+                        color: '#A4303F',
+                        
+                        data: tableauDeNombres // Mets les valeurs pour avoir les bars
+                      }
+                    ]
+                  };
+            
+                  // Display the chart using the configuration items and data just specified.
+                  myChart.setOption(option);
+            
+                });
+            
+            </script>
+
+
+
+
+        </section>
+
+        <section class="graphiques">
+<div>
+          <h2 class="titre"> Superfécie brulée (ha)</h2> 
+
+          <br>
+
+          <p>Nous pouvons remarquer que la région Rhône-Alpes a été la région la moins touché sur la période de 2021-2022 avec 2199 hectares, la Corse a été la seconde région la moins brulée avec 2432 hectares. Nous pouvons remarquer que la Provence-Alpes-Côte d’Azur est nettement plus brulée avec 13576 hectares ce qui le double du Languedoc-Roussillon avec 7735 hectares brulées.</p>
+</div>
+          <div class="droite">
+            <div id="graph" style="width:52vw; height:400px"></div></div>
+
+            
+
+            <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.js"></script>
+            <script>
+              fetch('./incendies.json')
+                .then((response) => response.json())
+                .then((json) => {
+                  // Initialize the echarts instance based on the prepared dom
+                  const myChart = echarts.init(document.querySelector('#graph'));
+            
+                  const tableauDeNombres = json.map((unObjet) => unObjet['Superficie brulée'])
+            
+            
+                  // Specify the configuration items and data for the chart
+                  const option = {
+            
+
+                    tooltip: {},
+
+                    
+                    xAxis: {
+                      data: ["CORSE","LANGUEDOC-ROUSSILLON","PROVENCE-ALPES-COTE D'AZUR","RHONE-ALPES"]// Ecrit 1, 2, 3, 4, ...
+                },
+                    yAxis: {
+                    },
+                    series: [
+                      {
+                        
+                        name: 'Surface brulée',
+                        type: 'bar',
+                        color: '#6C9A8B',
+                        
+                        data: tableauDeNombres // Mets les valeurs pour avoir les bars
+                      }
+                    ]
+                  };
+            
+                  // Display the chart using the configuration items and data just specified.
+                  myChart.setOption(option);
+            
+                });
+            
+            </script>
+  </section>
+
+<a href="promotion.html"> Voir image de promotion</a>
+
+<section id="conclusion">
+  <p>Nous pouvons remarquer que la Corse fait partir des régions avec un nombre conséquent de feu mais pourtant elle fait aussi partie des régions avec le moins d’hectares brulée avec seulement  2432. Ce résultat s’explique avec la flore présente dans ces espaces. Cette tendance se répète avec le Languedoc-Roussillon. Nous pouvons donc remarquer que la région PACA et la région Rhône-Alpes est proportionnel.</p>
+</section>
+
+    </main>
+
+</body>
+</html>
